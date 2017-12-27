@@ -1,0 +1,46 @@
+{
+  "name": "my-app",
+  "version": "0.1.0",
+  "author": "YSO CORP",
+  "description": "A RESTful API boilerplate with Koajs 2, @Decorator, Node v8, async-await, babel, and much more...",
+  "license": "MIT",
+  "engines": {
+    "node": "8.9.1",
+    "npm": "5.5.1"
+  },
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development nodemon --exec babel-node src/index.js",
+    "start": "npm run dev",
+    "prod": "node dist/index.js",
+    "build-prod": "rimraf dist && cross-env NODE_ENV=production babel src --out-dir dist --copy-files",
+    "test": "cross-env NODE_ENV=test mocha --opts mocha.opts",
+    "lint": "eslint src config test"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.0",
+    "config": "^1.24.0",
+    "handlebars": "^4.0.6",
+    "koa-smart": "^1.1.0",
+    "request": "^2.83.0",
+    "request-promise": "^4.1.1",
+    "uuid": "^3.0.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-eslint": "^8.0.2",
+    "babel-plugin-transform-class-properties": "^6.23.0",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-plugin-transform-runtime": "^6.15.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-stage-3": "^6.17.0",
+    "cross-env": "^5.1.1",
+    "eslint": "^4.11.0",
+    "expect": "^21.2.1",
+    "grunt": "^1.0.1",
+    "grunt-shell": "^2.1.0",
+    "mocha": "^4.0.1",
+    "nodemon": "^1.11.0",
+    "rimraf": "^2.6.2",
+    "supertest": "^3.0.0"
+  }
+}
