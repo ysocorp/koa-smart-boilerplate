@@ -32,8 +32,6 @@
     "cross-env": "^5.1.1",
     "eslint": "^4.11.0",
     "expect": "^21.2.1",
-    "grunt": "^1.0.1",
-    "grunt-shell": "^2.1.0",
     "mocha": "^4.0.1",
     "nodemon": "^1.11.0",
     "rimraf": "^2.6.2",

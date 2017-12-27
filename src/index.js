@@ -28,8 +28,8 @@ export default class App extends AppBase { // the starting class must extend app
       i18n(this.app, {
         directory: join(__dirname, 'locales'),
         locales: ['en', 'fr'],
-        modes: ['query', 'subdomain', 'cookie', 'header', 'tld'],
-    }),// allows us to easily localize the API
+        modes: ['query', 'subdomain', 'cookie', 'header', 'tld']
+      }),// allows us to easily localize the API
       logger, // gives detailed logs of each request made on the API
       handleError, // helps handling error codes
       addDefaultBody, // if no body is present, put an empty object "{}" in its place.

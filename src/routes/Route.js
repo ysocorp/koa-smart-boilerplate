@@ -12,10 +12,5 @@ export default class Route extends RouteBase {
     return false;
   }
 
-  async afterRoute(ctx, infos, next) { // in the same manner as beforeRoute, afterRoute is executed after a request is made.
-    await super.beforeRoute(ctx, infos, next);
-    return false;
-  }
-
   // ************************************ !MIDDLEWARE *********************************
 }

@@ -1,6 +1,6 @@
-# RESTful json API Boilerplate Object with Decorator, Params checker, Koajs 2 and Sequelize
+# RESTful json API Boilerplate Object with Decorator, Params checker, Koajs 2
 
-A **RESTful json API** boilerplate with **Koajs 2**, **@ Decorators**, **Node v8!**, **Sequelize**, `async-await`, `babel`, and much more...
+A **RESTful json API** boilerplate with **Koajs 2**, **@ Decorators**, **Node v8!**, `async-await`, `babel`, and much more...
 ```sh
   export default class RouteUsers extends Route {
 
@@ -53,8 +53,7 @@ Clone this repository, remove the `.git` directory, run `git init`, and adjust d
 
 Before installing, [download and install Node.js](https://nodejs.org/en/download/). **Node.js v8.9.1** or higher will be required.
 
-* **Install grunt**
-`sudo npm install -g grunt`
+
 * **Install package**
 `npm install`
 * **Run Dev**
