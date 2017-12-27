@@ -17,13 +17,9 @@
     "lint": "eslint src config test"
   },
   "dependencies": {
-    "bcryptjs": "^2.4.0",
-    "config": "^1.24.0",
-    "handlebars": "^4.0.6",
     "koa-smart": "^1.1.0",
     "request": "^2.83.0",
-    "request-promise": "^4.1.1",
-    "uuid": "^3.0.1"
+    "request-promise": "^4.1.1"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
