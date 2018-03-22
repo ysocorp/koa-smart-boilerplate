@@ -11,7 +11,10 @@
     "dev": "cross-env NODE_ENV=development nodemon --exec babel-node src/index.js",
     "start": "npm run dev",
     "prod": "node dist/index.js",
-    "build-prod": "rimraf dist && cross-env NODE_ENV=production babel src --out-dir dist --copy-files",
+    "_rm-build-prod": "rimraf dist",
+    "_copy-locals": "cp -rf src/locales dist/",
+    "_build-prod": "cross-env NODE_ENV=production babel src --ignore 'locales' --out-dir dist --copy-files",
+    "build-prod": "npm run _rm-build-prod && npm run _build-prod && npm run _copy-locals",
     "test": "cross-env NODE_ENV=test mocha --opts mocha.opts",
     "lint": "eslint src config test"
   },
