@@ -19,9 +19,9 @@
     "lint": "eslint src config test"
   },
   "dependencies": {
-    "koa-smart": "^1.2.0",
-    "request": "^2.83.0",
-    "request-promise": "^4.1.1"
+    "koa-smart": "^1.2.2",
+    "request": "^2.87.0",
+    "request-promise": "^4.2.2"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
