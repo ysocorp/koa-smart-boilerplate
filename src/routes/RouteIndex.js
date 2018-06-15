@@ -1,21 +1,20 @@
 import Route from './Route';
-import packageJson from '../../package.json'
+import packageJson from '../../package.json';
 
 @Route.Route({
-    routeBase: '',
+  routeBase: '',
 })
 export default class RouteIndex extends Route {
-    constructor(params) {
-        super({ ...params });
-    }
+  constructor(params) {
+    super({ ...params });
+  }
 
-    // http://localhost:3000/
-    @Route.Get({ path: '/' })
-    index(ctx) {
-        this.sendOk(ctx, {
-            name: packageJson.name,
-            version: packageJson.version,
-        });
-    }
-
+  // http://localhost:3000/
+  @Route.Get({ path: '/' })
+  index(ctx) {
+    this.sendOk(ctx, {
+      name: packageJson.name,
+      version: packageJson.version,
+    });
+  }
 }
