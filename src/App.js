@@ -28,23 +28,27 @@ export default class App extends AppBase {
       // routeParam is an object and it will be give as parametter to all routes
       // so for example you can give models to all your route so you can access on route
       routeParam: {},
+      generateDoc: true, // indicates we want generate documentation automatically
+      docPath: join(__dirname, '..', 'apidoc'),
     });
   }
 
   async start() {
-    // TODO pass all models to all routes
-    // const models = await getModels()
-    // this.routeParam.models = models
+    // TODO pass all models to all routes.
+    // Eg:
+    //    const models = await getModels()
+    //    this.routeParam.models = models
 
     // we add the relevant middlewares to our API
     super.addMiddlewares([
       cors({ credentials: true }), // add cors headers to the requests
       helmet(), // adds various security headers to our API's responses
       bodyParser(), // automatically parses the body of POST/PUT/PATCH requests, and adds it to the koa context
-      i18n(this.app, {
+      i18n(this.koaApp, {
         directory: join(__dirname, 'locales'),
         locales: ['en', 'fr'],
         modes: ['query', 'subdomain', 'cookie', 'header', 'tld'],
+        extension: '.json',
       }), // allows us to easily localize the API
       handleError(), // helps handling error codes
       logger(), // gives detailed logs of each request made on the API

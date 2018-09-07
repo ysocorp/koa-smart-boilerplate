@@ -1,3 +1,5 @@
+import { Types } from 'koa-smart';
+
 import Route from './Route';
 
 export default class RouteExample extends Route {
@@ -16,11 +18,11 @@ export default class RouteExample extends Route {
   // post route: http://localhost:3000/example
   @Route.Post({
     path: '',
-    params: {
+    bodyType: Types.object().keys({
       // params to allow: all other params will be rejected
-      email: true, // return a 400 if the body doesn't contain email key
-      password: false, // password is optional
-    },
+      email: Types.string().required(), // return a 400 if the body doesn't contain email key
+      password: Types.string(), // password is optional
+    }),
   })
   async add(ctx) {
     const body = this.body(ctx); // or ctx.request.body
