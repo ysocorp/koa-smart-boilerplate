@@ -18,7 +18,7 @@
     "lint": "eslint src config test"
   },
   "dependencies": {
-    "koa-smart": "^2.0.1",
+    "koa-smart": "^2.0.2",
     "request": "^2.88.0",
     "request-promise": "^4.2.2"
   },
