@@ -1,5 +1,7 @@
 # RESTful json API Boilerplate Object with Decorator, Params checker, Koajs 2
 
+[Typescript version](https://github.com/ysocorp/koa-smart-boilerplate)
+
 A **RESTful json API** boilerplate with **Koajs 2**, **@ Decorators**, **Node v8!**, `async-await`, `babel`, and much more...
 
 ```sh

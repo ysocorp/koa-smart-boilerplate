@@ -1,6 +1,6 @@
 import { join } from 'path';
-import { App as AppBase } from 'koa-smart';
-import {
+import { App as AppBase, middlewares } from 'koa-smart';
+const {
   i18n,
   bodyParser,
   compress,
@@ -11,7 +11,7 @@ import {
   logger,
   RateLimit,
   RateLimitStores,
-} from 'koa-smart/middlewares';
+} = middlewares;
 
 // Set Default Option
 RateLimit.defaultOptions({
@@ -30,7 +30,7 @@ export default class App extends AppBase {
       routeParam: {},
       generateDoc: true, // indicates we want generate documentation automatically
       docPath: join(__dirname, '..', 'apidoc'),
-    });
+    })
   }
 
   async start() {
@@ -41,7 +41,9 @@ export default class App extends AppBase {
 
     // we add the relevant middlewares to our API
     super.addMiddlewares([
-      cors({ credentials: true }), // add cors headers to the requests
+      cors({
+        credentials: true
+      }), // add cors headers to the requests
       helmet(), // adds various security headers to our API's responses
       bodyParser(), // automatically parses the body of POST/PUT/PATCH requests, and adds it to the koa context
       i18n(this.koaApp, {
@@ -54,7 +56,12 @@ export default class App extends AppBase {
       logger(), // gives detailed logs of each request made on the API
       addDefaultBody(), // if no body is present, put an empty object "{}" in its place.
       compress({}), // compresses requests made to the API
-      RateLimit.middleware({ interval: { min: 1 }, max: 100 }), // this will limited every user to call a maximum of 100 request per minute
+      RateLimit.middleware({
+        interval: {
+          min: 1
+        },
+        max: 100
+      }), // this will limited every user to call a maximum of 100 request per minute
     ]);
 
     super.mountFolder(join(__dirname, 'routes'), '/'); // adds a folder to scan for route files
