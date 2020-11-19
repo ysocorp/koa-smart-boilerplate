@@ -1,4 +1,4 @@
---require babel-core/register
+--require ts-node/register
 --recursive
-./test/**/*.spec.js
+./test/**/*.spec.ts
 --timeout 4000

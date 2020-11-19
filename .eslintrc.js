@@ -1,12 +1,18 @@
 module.exports = {
-  "env": {
-    "mocha": true,
-    "node": true,
-    "protractor": true,
-    "es6": true
+  env: {
+    es2021: true,
+    node: true,
+    mocha: true
   },
-  "extends": "eslint:recommended",
-  "parser": "babel-eslint",
-  "rules": {
-  }
+  extends: [
+    'standard'
+  ],
+  parser: '@typescript-eslint/parser',
+  parserOptions: {
+    ecmaVersion: 12
+  },
+  plugins: [
+    '@typescript-eslint'
+  ],
+  rules: {}
 }

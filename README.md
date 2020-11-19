@@ -1,6 +1,8 @@
 # RESTful json API Boilerplate Object with Decorator, Params checker, Koajs 2
 
-A **RESTful json API** boilerplate with **Koajs 2**, **@ Decorators**, **Node v8!**, `async-await`, `babel`, and much more...
+[BABEL + Javascript version](https://github.com/ysocorp/koa-smart-boilerplate/tree/examples/babel-js)
+
+A **RESTful json API** boilerplate with **Typescript**, **Koajs 2**, **@ Decorators**, and much more...
 
 ```sh
   export default class RouteUsers extends Route {
