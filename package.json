@@ -36,7 +36,7 @@
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^4.2.1",
     "expect": "^24.8.0",
-    "mocha": "^6.1.4",
+    "mocha": "^10.2.0",
     "nodemon": "^1.19.1",
     "rimraf": "^2.6.3",
     "supertest": "^4.0.2",
